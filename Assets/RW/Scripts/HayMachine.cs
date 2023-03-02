@@ -6,6 +6,10 @@ public class HayMachine : MonoBehaviour
 {
     public float movementSpeed;
     public float horizontalBoundary = 22;
+    public GameObject haybale;
+    public Transform haySpawnpoint;
+    public float shootInterval;
+    public float shootTimer;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +19,8 @@ public class HayMachine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     UpdateMovement();   
+     UpdateMovement();
+     UpdateShooting();
     }
     private void UpdateMovement(){
         float horizontalInput = Input.GetAxisRaw("Horizontal");
@@ -27,5 +32,19 @@ public class HayMachine : MonoBehaviour
         {
             transform.Translate(transform.right * movementSpeed * Time.deltaTime);
         }
+    }
+    private void UpdateShooting()
+    {
+        shootTimer -= Time.deltaTime; 
+
+        if (shootTimer <= 0 && Input.GetKey(KeyCode.Space)) 
+        {
+            shootTimer = shootInterval; 
+            ShootHay(); 
+        }
+    }
+    private void ShootHay()
+    {
+        Instantiate(haybale, haySpawnpoint.position, Quaternion.identity);
     }
 }

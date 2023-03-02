@@ -358,6 +358,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 306621259}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &389004066 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1855226494, guid: c91d458c12526534eb19d65378204353,
+    type: 3}
+  m_PrefabInstance: {fileID: 5233456974663517127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &522917101
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1084,6 +1090,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3896297176299936430, guid: c91d458c12526534eb19d65378204353,
+        type: 3}
+      propertyPath: haySpawnpoint
+      value: 
+      objectReference: {fileID: 389004066}
+    - target: {fileID: 3896297176299936430, guid: c91d458c12526534eb19d65378204353,
+        type: 3}
+      propertyPath: shootInterval
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 6020313712292669828, guid: c91d458c12526534eb19d65378204353,
         type: 3}
